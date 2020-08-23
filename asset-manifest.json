@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/aliens-stack/static/css/main.eedd6985.chunk.css",
+    "main.js": "/aliens-stack/static/js/main.331f6c19.chunk.js",
+    "main.js.map": "/aliens-stack/static/js/main.331f6c19.chunk.js.map",
+    "runtime-main.js": "/aliens-stack/static/js/runtime-main.7089f52b.js",
+    "runtime-main.js.map": "/aliens-stack/static/js/runtime-main.7089f52b.js.map",
+    "static/js/2.88f06b00.chunk.js": "/aliens-stack/static/js/2.88f06b00.chunk.js",
+    "static/js/2.88f06b00.chunk.js.map": "/aliens-stack/static/js/2.88f06b00.chunk.js.map",
+    "index.html": "/aliens-stack/index.html",
+    "precache-manifest.5f09093ac1adf1d0ebb39e4b70bb3efd.js": "/aliens-stack/precache-manifest.5f09093ac1adf1d0ebb39e4b70bb3efd.js",
+    "service-worker.js": "/aliens-stack/service-worker.js",
+    "static/css/main.eedd6985.chunk.css.map": "/aliens-stack/static/css/main.eedd6985.chunk.css.map",
+    "static/js/2.88f06b00.chunk.js.LICENSE.txt": "/aliens-stack/static/js/2.88f06b00.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7089f52b.js",
+    "static/js/2.88f06b00.chunk.js",
+    "static/css/main.eedd6985.chunk.css",
+    "static/js/main.331f6c19.chunk.js"
+  ]
+}
