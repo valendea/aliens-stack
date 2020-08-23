@@ -1,32 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+import { CardContainer } from './components/card-container/card-container.component';
+import { SearchBar } from './components/search-bar/search-bar.component';
+
 import './App.css';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      aliens: [],
+      searchText: ''
+    };
+  }
 
-const App = () => {
-  return (
-    <h1>Aliens Stack</h1>
-  )
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(response => response.json())
+      .then(users => this.setState({ aliens: users}))
+  }
+
+  render() {
+    const { aliens, searchText } = this.state;
+    const filteredAliens = aliens.filter(alien => alien.name.toLowerCase().includes(searchText)) 
+
+    return (
+      <div className="App">
+        <h1>Aliens Stack</h1>
+        <SearchBar
+          placeholder="Find any alien.."
+          handleChange={e => {
+            this.setState({ searchText: e.target.value })
+          }}
+        />
+        <CardContainer aliens={filteredAliens} />
+      </div>
+    )
+  }
 }
 
 export default App;
